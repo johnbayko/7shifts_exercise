@@ -1,0 +1,14 @@
+This was a programming exercise. Requirements were:
+
+- Use your language of choice.
+- Write tests.
+- Focus on simplicity.
+- Please leave you code in a runnable state so we can go over your code and
+  example outputs together during your on-site.
+- Work incrementally. Don’t read ahead too far, trick is to complete one task,
+  then move on.
+- You can assume correct inputs. Don’t worry about a tonne of edge cases.
+
+I'd argue that the Java version is simple, in that functionality is isolated in
+a way that makes it easier to modify without affecting tests for unmodified
+code. It wasn't simple to write, but being lazy at the start costs more later.
