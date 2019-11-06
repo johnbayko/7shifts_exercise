@@ -32,6 +32,11 @@ class StringCalculatorTest(unittest.TestCase):
         self.assertEqual(1002, self.sc.Add("2,1000"))
         self.assertEqual(2, self.sc.Add("2,1001"))
 
+    def test_longDelimTest(self):
+        self.assertEquals(6, self.sc.Add("//***\n1***2***3"));
+
+    def test_multiDelimTest(self):
+        self.assertEquals(6, self.sc.Add("//$,@\n1$2@3"));
 
 if __name__ == '__main__':
     unittest.main()

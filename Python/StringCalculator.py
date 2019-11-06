@@ -6,17 +6,24 @@ class StringCalculator:
         self.MAX_INT = 1000
     
     def Add(self, numbers):
-        delim = ","  # default
+        delimList = [","]  # default
         if "//" == numbers[0:2]:
             delimStart = 2
             delimEnd = numbers.find("\n")
-            delim = numbers[delimStart:delimEnd]
+            delimList = numbers[delimStart:delimEnd].split(",")
             numberString = numbers[delimEnd:]
         else:
             # No delimiter specifier
             numberString = numbers
 
-        numberStringList = numberString.split(delim)
+        # Split all numberString with each delimiter to get numberStringList
+        numberStringList = [numberString]
+        for delim in delimList:
+            newNumberStringList = []
+            for numberToSplit in numberStringList:
+                newNumberStringList = newNumberStringList + numberToSplit.split(delim)
+            numberStringList = newNumberStringList
+
         if numberStringList[0] == "":
             # There weren't any numbers
             return 0
