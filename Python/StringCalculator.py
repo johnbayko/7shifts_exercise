@@ -11,7 +11,7 @@ class StringCalculator:
             delimStart = 2
             delimEnd = numbers.find("\n")
             delimList = numbers[delimStart:delimEnd].split(",")
-            numberString = numbers[delimEnd:]
+            numberString = numbers[delimEnd+1:]
         else:
             # No delimiter specifier
             numberString = numbers
