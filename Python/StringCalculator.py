@@ -19,6 +19,8 @@ class StringCalculator:
         # Split all numberString with each delimiter to get numberStringList
         numberStringList = [numberString]
         for delim in delimList:
+            # A list comprehension would be really nice here,
+            # but would require an extra step to flatten the list.
             newNumberStringList = []
             for numberToSplit in numberStringList:
                 newNumberStringList = newNumberStringList + numberToSplit.split(delim)
